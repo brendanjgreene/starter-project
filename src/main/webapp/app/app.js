@@ -1,1 +1,1 @@
-var accountApp = angular.module('accountApp',['ui.router']);
+var accountApp = angular.module('accountApp',['ui.router','ui.directives','ui.filters']);

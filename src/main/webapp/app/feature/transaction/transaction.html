@@ -7,9 +7,9 @@
   				</button>
   			<div class="dropdown-menu">
   				<li class="dropdown-item">
-  					<a class="dropdown-item" href="#" ng-repeat="transaction in transactionCtrl.transactions" ng-click="transactionCtrl.getAccNo(transaction.accountNumber)">{{transaction.accountNumber}}</a>
+  					<a class="dropdown-item" href="#" ng-repeat="transaction in transactionCtrl.transactions | unique:'accountNumber'" ng-click="transactionCtrl.getAccNo(transaction.accountNumber)">{{transaction.accountNumber}}</a>
     				</li>
-  			</div>
+  			</div>	
 		</div>
 	    <div class="panel-body">
    		<div ng-show="transactionCtrl.accNum">
